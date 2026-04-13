@@ -1,0 +1,131 @@
+================================================================================
+EXPLORATORY DATA ANALYSIS REPORT - SALES DATASET
+================================================================================
+
+1. DATASET OVERVIEW
+--------------------------------------------------------------------------------
+Total Rows: 100,000
+Total Columns: 9
+Memory Usage: 20.55 MB
+
+2. DATA TYPES
+--------------------------------------------------------------------------------
+  transaction_id       : int64
+  customer_id          : int64
+  product              : object
+  category             : object
+  quantity             : int64
+  price                : float64
+  revenue              : float64
+  date                 : datetime64[ns]
+  region               : object
+
+3. MISSING VALUES ANALYSIS
+--------------------------------------------------------------------------------
+  price                :  5,000 rows ( 5.00%)
+  revenue              :  5,000 rows ( 5.00%)
+  region               :  2,000 rows ( 2.00%)
+
+4. STATISTICAL SUMMARY
+--------------------------------------------------------------------------------
+
+  TRANSACTION_ID:
+    Count:  100,000
+    Mean:   50000.50
+    Median: 50000.50
+    Std:    28867.66
+    Min:    1.00
+    Max:    100000.00
+
+  CUSTOMER_ID:
+    Count:  100,000
+    Mean:   3000.09
+    Median: 2997.00
+    Std:    1153.61
+    Min:    1000.00
+    Max:    4999.00
+
+  QUANTITY:
+    Count:  100,000
+    Mean:   5.49
+    Median: 5.00
+    Std:    2.87
+    Min:    1.00
+    Max:    10.00
+
+  PRICE:
+    Count:  95,000
+    Mean:   254.40
+    Median: 254.60
+    Std:    141.70
+    Min:    10.00
+    Max:    500.00
+
+  REVENUE:
+    Count:  95,000
+    Mean:   1397.44
+    Median: 1078.34
+    Std:    1142.51
+    Min:    10.05
+    Max:    4999.90
+
+5. CATEGORICAL ANALYSIS
+--------------------------------------------------------------------------------
+
+  PRODUCT:
+    Unique values: 20
+    Top 5 values:
+      Self-Help            :  5,162 ( 5.16%)
+      Jeans                :  5,080 ( 5.08%)
+      Running Shoes        :  5,077 ( 5.08%)
+      Jacket               :  5,063 ( 5.06%)
+      Yoga Mat             :  5,058 ( 5.06%)
+
+  CATEGORY:
+    Unique values: 5
+    Top 5 values:
+      Books                : 20,141 (20.14%)
+      Clothing             : 20,119 (20.12%)
+      Electronics          : 19,982 (19.98%)
+      Sports               : 19,950 (19.95%)
+      Home & Garden        : 19,808 (19.81%)
+
+  REGION:
+    Unique values: 5
+    Top 5 values:
+      South                : 19,669 (19.67%)
+      North                : 19,665 (19.66%)
+      Central              : 19,603 (19.60%)
+      West                 : 19,587 (19.59%)
+      East                 : 19,476 (19.48%)
+
+6. DATE RANGE ANALYSIS
+--------------------------------------------------------------------------------
+  Earliest Date: 2023-01-01 00:00:00
+  Latest Date:   2024-12-31 00:00:00
+  Date Span:     730 days
+
+7. CORRELATION ANALYSIS (Numeric Columns)
+--------------------------------------------------------------------------------
+  transaction_id vs customer_id: -0.0053
+  transaction_id vs quantity: 0.0024
+  transaction_id vs price: -0.0024
+  transaction_id vs revenue: -0.0010
+  customer_id vs quantity: 0.0003
+  customer_id vs price: 0.0051
+  customer_id vs revenue: 0.0065
+  quantity vs price: 0.0033
+  quantity vs revenue: 0.6408
+  price vs revenue: 0.6825
+
+8. OUTLIER DETECTION (IQR Method)
+--------------------------------------------------------------------------------
+  transaction_id       :      0 outliers ( 0.00%)
+  customer_id          :      0 outliers ( 0.00%)
+  quantity             :      0 outliers ( 0.00%)
+  price                :      0 outliers ( 0.00%)
+  revenue              :    843 outliers ( 0.84%)
+
+================================================================================
+END OF REPORT
+================================================================================
